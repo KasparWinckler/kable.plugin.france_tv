@@ -314,7 +314,7 @@ class Recherche(kplugin.Search):
         return {"label": "Recherche"}
 
     def open(self):
-        yield from Resultat(term=self.query).open()
+        yield from Resultat(term=self.search_string).open()
 
 
 class Resultat(Folder, qargs=["term", "index"]):

@@ -208,7 +208,10 @@ class Folder(kplugin.Folder):
                     item=item,
                 )
 
-            elif item_type == "categorie":
+            elif item_type in (
+                "categorie",
+                "hub_podcasts",
+            ):
                 yield Categorie(
                     path=item.get("url_complete"),
                     data=item,
